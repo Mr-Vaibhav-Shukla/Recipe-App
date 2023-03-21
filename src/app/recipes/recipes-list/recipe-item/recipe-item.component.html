@@ -1,0 +1,18 @@
+<a
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  style="text-decoration: none;color: black;">
+    <div class="card" routerLinkActive="bg-info text-white">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-8">
+                    <h5 class="card-title">{{recipe.name}}</h5>
+                    <p class="card-text">{{recipe.description}}</p>
+                </div>
+                <div class="col-4">
+                    <img src="{{recipe.imagePath}}" class="card-img-top w-100"  alt="Recipe Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</a>

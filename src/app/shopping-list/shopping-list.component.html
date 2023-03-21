@@ -1,0 +1,6 @@
+<div class="container">
+    <app-shopping-edit></app-shopping-edit>
+    <ul class="list-group pt-3">
+        <a class="list-group-item" *ngFor="let item of ingredients; let i =  index" (click)="onEditItem(i)">{{item.name}} ({{item.amount}})</a>
+    </ul>
+</div>

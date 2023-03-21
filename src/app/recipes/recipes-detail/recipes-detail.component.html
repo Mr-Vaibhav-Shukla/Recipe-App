@@ -1,0 +1,21 @@
+<div class="card mt-3">
+    <img [src]="recipe.imagePath" class="card-img-top w-100" alt="{{recipe.name}}">
+    <div class="card-body">
+        <h3>{{recipe.name}}</h3>
+        <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle btn-sm" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" (click) = "addToShoppingList()">Too Shopping List</a></li>
+                <li><a class="dropdown-item" [routerLink]="['edit']">Edit Recipe</a></li>
+                <li><a class="dropdown-item" (click) = "deleteRecipe()">Delete Recipe</a></li>
+            </ul>
+        </div>
+        <p>{{recipe.description}}</p>
+        <ul *ngFor="let item of recipe.ingredients">
+                <li>{{item.name}} - {{item.amount}}</li>
+        </ul>
+    </div>
+</div>
